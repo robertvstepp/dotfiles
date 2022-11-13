@@ -5,7 +5,7 @@
 ! Generic fg/bg colors to give white text on blackish bacground:
 *.foreground:	#C6C6C6
 *.background:	#1C1C1C
-*.cursorColor:	#444444
+*.cursorColor:	#aaaaaa
 
 ! Colors from "Building a Mouseless Development Environment".
 ! N.B.:  The pair of numbers in each comment after the color name are xterm color codes.
@@ -45,7 +45,7 @@
 ! URxvt Settings:
 ! N.B.:  URxvt *only* settings must be prefixed by "URxvt*".
 
-URxvt*font:	xft:DejaVuSansMono:size=12:antialias=true
+URxvt*font:	xft:DejaVuSansMono:size=11:antialias=true
 URxvt*letterSpace:  -1
 URxvt*borderless:  false
 URxvt*externalBorder:  0
