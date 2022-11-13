@@ -45,17 +45,17 @@
 ! URxvt Settings:
 ! N.B.:  URxvt *only* settings must be prefixed by "URxvt*".
 
-URxvt*font:	xft:DejaVuSansMono:size=11:antialias=true
-URxvt*letterSpace:  -1
-URxvt*borderless:  false
-URxvt*externalBorder:  0
-URxvt*internalBorder:  4
-URxvt*scrollBar:  false
+URxvt.font:	xft:DejaVuSansMono:size=11:antialias=true
+URxvt.letterSpace:  -1
+URxvt.borderless:  false
+URxvt.externalBorder:  0
+URxvt.internalBorder:  4
+URxvt.scrollBar:  false
 
-URxvt*saveLines:  5000
+URxvt.saveLines:  5000
 
 ! Settings for urxvt-tabbedex-mina86-git package:
-URxvt*perl-ext-common:  default, tabbedex
+URxvt.perl-ext-common:  default,tabbedex
 
 URxvt.keysym.Control-Shift-N:  perl:tabbedex:new_tab
 URxvt.keysym.Control-Shift-K:  perl:tabbedex:next_tab
@@ -65,10 +65,10 @@ URxvt.keysym.Control-Shift-R:  perl:tabbedex:rename_tab
 URxvt.keysym.Control-Shift-H:  perl:tabbedex:move_tab_left
 URxvt.keysym.Control-Shift-L:  perl:tabbedex:move_tab_right
 
-URxvt*tabbedex.tabbar-fg:  15
-URxvt*tabbedex.tabbar-bg:  236
-URxvt*tabbedex.tab-fg:  110
-URxvt*tabbedex.tab-bg:  236
+URxvt.tabbedex.tabbar-fg:  15
+URxvt.tabbedex.tabbar-bg:  236
+URxvt.tabbedex.tab-fg:  110
+URxvt.tabbedex.tab-bg:  236
 
-URxvt*tabbedex.transparent:  true
-URxvt*tabbedex.new-button:  true
+URxvt.tabbedex.transparent:  true
+URxvt.tabbedex.new-button:  false
