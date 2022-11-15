@@ -1,0 +1,13 @@
+# $HOME/dotfiles/zsh/aliases
+
+alias ll='ls -lahs'
+
+# Git aliases
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+
+# Alias for directory stack
+alias d='dirs -v'
+for index ({1..9}) alias "$index"="cd +${index}"; unset index
