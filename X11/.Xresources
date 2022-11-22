@@ -43,9 +43,11 @@
 *.color15:	#FFFFFF
 
 ! URxvt Settings:
-! N.B.:  URxvt *only* settings must be prefixed by "URxvt*".
+! N.B.:  URxvt *only* settings must be prefixed by "URxvt.".
 
-URxvt.font:	xft:DejaVuSansMono:size=11:antialias=true
+URxvt.font: xft:FiraCode Nerd Font Mono:style=Regular:pixelsize=14:minspace=False 
+URxvt.boldFont:  xft:FiraCode Nerd Font Mono:style=Bold:pixelsize=14:minspace=False
+URxvt.italicFont:  xft:FiraCode Nerd Font Mono:style=Light:pixelsize=14:minspace=False
 URxvt.letterSpace:  -1
 URxvt.borderless:  false
 URxvt.externalBorder:  0
