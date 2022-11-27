@@ -12,9 +12,7 @@ ln -sf "$DOTFILES/nvim/init.vim" "$XDG_CONFIG_HOME/nvim"
     && curl -fLo "$DOTFILES/nvim/autoload/plug.vim" --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-#mkdir -p "XDG_CONFIG_HOME/nvim/autoload"
 mkdir -p "$XDG_DATA_HOME/nvim/site/autoload/"
-#ln -sf "$DOTFILES/nvim/autoload/plug.vim" "$XDG_CONFIG_HOME/nvim/autoload/plug.vim"
 ln -sf "$DOTFILES/nvim/autoload/plug.vim" "$XDG_DATA_HOME/nvim/site/autoload/plug.vim"
 
 # Install (or updte) all the plugins
@@ -50,7 +48,7 @@ ln -sf "$DOTFILES/zsh/external" "$XDG_CONFIG_HOME/zsh"
 # Fonts #
 #########
 
-mkdir -p "XDG_DATA_HOME"
+mkdir -p "$XDG_DATA_HOME"
 cp -rf "$DOTFILES/fonts" "$XDG_DATA_HOME"
 
 ########
