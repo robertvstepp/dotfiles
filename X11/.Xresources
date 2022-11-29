@@ -2,75 +2,39 @@
 ! Comments are preceded by exclamation points.
 ! Options preceded by "*." will apply to *every* application which uses this file.
 
-! Generic fg/bg colors to give white text on blackish bacground:
-*.foreground:	#C6C6C6
-*.background:	#1C1C1C
-*.cursorColor:	#aaaaaa
+! -----------------------------------------------------------------------------
+! File: gruvbox-dark.xresources
+! Description: Retro groove colorscheme generalized
+! Author: morhetz <morhetz@gmail.com>
+! Source: https://github.com/morhetz/gruvbox-generalized
+! Last Modified: 6 Sep 2014
+! -----------------------------------------------------------------------------
 
-! Colors from "Building a Mouseless Development Environment".
-! N.B.:  The pair of numbers in each comment after the color name are xterm color codes.
-
-! black 236 238
-*.color0:	#303030
-*.color8:	#444444
-
-! red 167
-*.color1:	#D75F5F
-*.color9:	#D75F5F
-
-! green 108
-*.color2:	#87AF87
-*.color10:	#87AF87
-
-! yellow 221
-*.color3:	#FFD75F
-*.color11:	#FFD75F
-
-! blue 110
-*.color4:	#87AFD7
-*.color12:	#87AFD7
-
-! magenta 146
-*.color5:	#AFAFD7
-*.color13:	#AFAFD7
-
-! cyan 75
-*.color6:	#AFD7FF
-*.color14:	#AFD7FF
-
-! white 239 15
-*.color7:	#E4E4E4
-*.color15:	#FFFFFF
-
-! URxvt Settings:
-! N.B.:  URxvt *only* settings must be prefixed by "URxvt.".
-
-URxvt.font: xft:FiraCode Nerd Font Mono:style=Regular:pixelsize=14:minspace=False 
-URxvt.boldFont:  xft:FiraCode Nerd Font Mono:style=Bold:pixelsize=14:minspace=False
-URxvt.italicFont:  xft:FiraCode Nerd Font Mono:style=Light:pixelsize=14:minspace=False
-URxvt.letterSpace:  -1
-URxvt.borderless:  false
-URxvt.externalBorder:  0
-URxvt.internalBorder:  4
-URxvt.scrollBar:  false
-
-URxvt.saveLines:  5000
-
-! Settings for urxvt-tabbedex-mina86-git package:
-URxvt.perl-ext-common:  default,tabbedex
-
-URxvt.keysym.Control-Shift-N:  perl:tabbedex:new_tab
-URxvt.keysym.Control-Shift-K:  perl:tabbedex:next_tab
-URxvt.keysym.Control-Shift-J:  perl:tabbedex:prev_tab
-
-URxvt.keysym.Control-Shift-R:  perl:tabbedex:rename_tab
-URxvt.keysym.Control-Shift-H:  perl:tabbedex:move_tab_left
-URxvt.keysym.Control-Shift-L:  perl:tabbedex:move_tab_right
-
-URxvt.tabbedex.tabbar-fg:  15
-URxvt.tabbedex.tabbar-bg:  236
-URxvt.tabbedex.tab-fg:  110
-URxvt.tabbedex.tab-bg:  236
-
-URxvt.tabbedex.transparent:  true
-URxvt.tabbedex.new-button:  false
+! hard contrast: *background: #1d2021
+*background: #282828
+! soft contrast: *background: #32302f
+*foreground: #ebdbb2
+! Black + DarkGrey
+*color0:  #282828
+*color8:  #928374
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #fb4934
+! DarkGreen + Green
+*color2:  #98971a
+*color10: #b8bb26
+! DarkYellow + Yellow
+*color3:  #d79921
+*color11: #fabd2f
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #83a598
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #8ec07c
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2

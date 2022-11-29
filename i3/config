@@ -22,51 +22,24 @@ font pango:FiraCode Nerd Font Mono 10
 
 #------------------------------------------------------------------------------
 # COLORS AND WINDOW DESIGN
-# Generic:
-set_from_resource $foreground foreground #C6C6C6
-set_from_resource $background background #1C1C1C
-set_from_resource $cursorColor cursorColor #aaaaaa
+# Gruvbox dark theme
 
-# black
-set_from_resource $black1 color0 #303030
-set_from_resource $black2 color8 #444444
-set $trueblack #000000
+set $bg #282828
+set $red #cc241d
+set $green #98971a
+set $yellow #d79921
+set $blue #458588
+set $purple #b16286
+set $aqua #689d68
+set $gray #a89984
+set $darkgray #1d2021
+set $lightgray #bdae93
 
-# red
-set_from_resource $red1 color1 #D75F5F
-set_from_resource $red2 color9 #D75F5F
-
-# green
-set_from_resource $green1 color2 #87AF87
-set_from_resource $green2 color10 #87AF87
-
-# yellow
-set_from_resource $yellow1 color3 #FFD75F
-set_from_resource $yellow2 color11 #FFD75F
-
-# blue
-set_from_resource $blue1 color4 #87AFD7
-set_from_resource $blue2 color12 #87AFD7
-
-# magenta
-set_from_resource $magenta1 color5 #AFAFD7
-set_from_resource $magenta2 color13	#AFAFD7
-
-# cyan
-set_from_resource $cyan1 color6	#AFD7FF
-set_from_resource $cyan2 color14 #AFD7FF
-
-# white
-set_from_resource $white1 color7 #E4E4E4
-set_from_resource $white2 color15 #FFFFFF
-
-# WINDOW DESIGN
-
-#Class                  Border      Background  Text        Indicator   Child_Border
-client.focused_inactive #333333     $background $foreground #484e50
-client.unfocused        #333333     #222222     #888888     #292D2E     #222222
-client.urgent           $red1       $red1       $white2     $red1       $red1
-client.placeholder      $trueblack  #0C0C0C     $white2     $trueblack  #0C0C0C
+# class                 border|backgr|text|indicator|child_border
+client.focused          $lightgray $lightgray $bg $purple $darkgray
+client.focused_inactive $darkgray $darkgray $lightgray $purple $darkgray
+client.unfocused        $darkgray $darkgray $lightgray $purple $darkgray
+client.urgent           $red $red $white $red $red
 #------------------------------------------------------------------------------
 
 # Start XDG autostart .desktop files using dex. See also
@@ -114,7 +87,7 @@ tiling_drag modifier titlebar
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec urxvtc
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -223,14 +196,14 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 for_window [class="Arandr"] floating enable
 
 # Terminal scratchpad:
-for_window [instance="urxvt_scratchpad"] move to scratchpad
-bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
-exec urxvtc -name urxvt_scratchpad
+#for_window [instance="Alacritty"] move to scratchpad
+#bindsym $mod+Shift+t [instance="Alacritty"] scratchpad show
+#exec alacritty -name Alacritty
 
 # htop (Interactive process viewer) scratchpad
-for_window [instance="htop_scratchpad"] move to scratchpad
-bindsym $mod+Shift+p [instance="htop_scratchpad"] scratchpad show
-exec urxvtc -name htop_scratchpad -e htop
+#for_window [instance="htop_scratchpad"] move to scratchpad
+#bindsym $mod+Shift+p [instance="htop_scratchpad"] scratchpad show
+#exec alacritty -name htop_scratchpad -e htop
 #------------------------------------------------------------------------------
 
 # reload the configuration file
@@ -293,18 +266,26 @@ focus_follows_mouse no
 bar {
         font pango:FiraCode Nerd Font Mono, FontAwesome 11
         status_command i3status --config $HOME/.config/i3/i3status.conf
-        # Disable all tray icons
         tray_output DP-1-8
-        #separator_symbol "|"
         colors {
-            background $black2
-            statusline $white2
-            separator $white2
+            #background $black2
+            #statusline $white2
+            #separator $white2
             #                   border  background  text
-            focused_workspace   $background $background $red1
-            active_workspace    $black2 $black1 $white2
-            inactive_workspace  $black1 $black2 $foreground
-            urgent_workspace    $red1 $red1 $white2
-            binding_mode        $background $red2 $white2
+            #focused_workspace   $background $background $red1
+            #active_workspace    $black2 $black1 $white2
+            #inactive_workspace  $black1 $black2 $foreground
+            #urgent_workspace    $red1 $red1 $white2
+            #binding_mode        $background $red2 $white2
+            # bar background color
+            background $bg
+            # text color used for blocks that do not have a color specified.
+            statusline $lightgray
+            # workspaces section            
+            #                    border  backgr. text
+            focused_workspace    $lightgray $lightgray $bg
+            inactive_workspace   $darkgray $darkgray $lightgray
+            active_workspace     $darkgray $darkgray $lightgray
+            urgent_workspace     $red $red $bg
         }
 }
